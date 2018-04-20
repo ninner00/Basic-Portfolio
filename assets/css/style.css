@@ -12,6 +12,11 @@ body {
   position:relative; /*REQUIRED Sets up positioning for your footer*/
 }
 
+.body-wrap { 
+    min-height: 100%;
+    margin: 0 auto -50px;
+}
+
 div.clear { clear:both; }
 
 a { 
@@ -90,6 +95,7 @@ h2 {
 
 .main-container { 
     padding: 20px;
+    display:grid;
 }
 
 .main-info { 
@@ -103,6 +109,26 @@ h2 {
  }
 
 #bio-image { width:200px; }
+
+/* Footer Fun */
+
+.footer, .push {
+    height: 50px;
+}
+
+.footer {
+    width:100%;
+    padding-top:30px;
+    border-top: 4px solid #4aaaa5;
+    background:#666;
+    color:#eee;
+    font-size:12px;
+     
+    text-align:center;
+     
+    bottom:0;          /*to the bottom of the body/page*/
+    left:0;            /*and to the left of the body/page.*/
+}
 
 #sticky {
     width:100%;
@@ -121,7 +147,7 @@ h2 {
 
  /* Image fun */
  .ch-grid {
-	margin: 0 0 5px 0;
+	margin: 22px 0 5px 0;
 	padding: 0;
 	list-style: none;
 	display: block;
@@ -205,7 +231,7 @@ h2 {
 	color: #fff;
 	padding:  5px;
 	font-style: italic;
-	margin: 0 30px;
+	margin: 50px 30px 0 30px;
 	font-size: 12px;
     border-top: 1px solid rgba(255,255,255,0.5);
     line-height: 100%;
@@ -235,4 +261,83 @@ h2 {
 .ch-item:hover .ch-info-back {
 	transform: rotate3d(1,0,0,0deg);
 	opacity: 1;
+}
+
+/* Input & Textarea Fun */
+.input-info {
+        padding: 20px 0;
+    }
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+     
+    background-color:#4aaaa5;
+    color: white;
+    padding: 8px 16px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+     
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+
+/* Photo Fun */
+* {box-sizing: border-box;}
+
+.image-container {
+  position: relative;
+  margin:20px 20px 20px 0;
+  max-width: 300px;
+float: left;
+ 
+}
+
+.image {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+
+  background: #4aaaa5;
+  color: #f1f1f1; 
+  width: 300px;
+  transition: .5s ease;
+  opacity:1;
+  color: white;
+  font-size: 18px;
+  padding: 20px;
+  text-align: center;
+}
+
+.image-container:hover .overlay {
+  opacity: 0;
 }
